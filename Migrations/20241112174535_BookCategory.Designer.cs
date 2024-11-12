@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Molnar_Iozsef_Lab2.Data;
 
@@ -11,9 +12,11 @@ using Molnar_Iozsef_Lab2.Data;
 namespace Molnar_Iozsef_Lab2.Migrations
 {
     [DbContext(typeof(Molnar_Iozsef_Lab2Context))]
-    partial class Molnar_Iozsef_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20241112174535_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
